@@ -21,7 +21,7 @@
   <body>
     <header>
       <!-- place navbar here -->
-      <div class="container-fluid" style="background-color: aliceblue">
+      <div class="container-fluid" id="navbar">
         <div class="container">
           <div class="row d-flex justify-content-between">
             <div
@@ -35,22 +35,22 @@
               />
             </div>
             <div
-              class="col-md-6 col-sm-12 d-flex justify-content-md-end justify-content-sm-center justify-content-center align-middle py-2 px-auto"
+              class="col-md-6 col-sm-12 d-flex justify-content-md-end justify-content-sm-center justify-content-center align-middle py-3 px-auto"
             >
-              <form class="d-flex">
+              <form class="d-flex" id="search_bar">
                 <input
-                  class="form-control"
+                  class="px-2 py-1" id="search_field"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
                 />
-                <button class="btn px-3" type="submit">Search</button>
+                <button class=" py-1 px-3" id="search_btn" type="submit">Search</button>
               </form>
             </div>
           </div>
         </div>
       </div>
-      <nav class="navbar navbar-primary bg-primary"></nav>
+      <nav class="navbar navbar-dark bg-dark mt-2"></nav>
     </header>
     <main></main>
     <footer>
