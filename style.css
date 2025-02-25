@@ -1,5 +1,5 @@
 #navbar{
-    background-color: rgba(240, 248, 255, 0.361)
+    background-color: rgba(186, 199, 210, 0.361)
 }
 #search_bar{
 border: 1px solid #545454;
@@ -18,7 +18,7 @@ border-radius: 5px;
 #search_btn{
     border-style: none;
     border-radius: 0px 4px 4px 0px;
-    font-weight: 300;
+    font-weight: 400;
     color: #ffc107;
     background-color: #545454;
     transition: all .7s ease;
