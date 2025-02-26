@@ -6,6 +6,7 @@
   border-bottom: 2px solid black;
 }
 #button_navbar {
+  background-color: black;
   border-bottom: 2px solid #ffc107;
   border-top: 2px solid #ffc107;
 }
@@ -34,6 +35,18 @@
 #search_btn:hover {
   color: #545454;
   background-color: #ffc107;
+}
+#home {
+  color: #ffc107;
+}
+#navbarDropdown {
+  color: #ffc107;
+}
+#aboutus {
+  color: #ffc107;
+}
+#contact {
+  color: #ffc107;
 }
 #side_banner {
   background-color: none;
