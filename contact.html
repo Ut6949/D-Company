@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frosted Glass Effect</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #333;
+      }
+
+      .image-container {
+        position: relative;
+        width: 400px; /* Adjust size as needed */
+        height: 250px;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .frosted-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.092); /* Semi-transparent */
+        backdrop-filter: blur(1px); /* The blur effect */
+        -webkit-backdrop-filter: blur(1px); /* For Safari support */
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container">
+      <img src="Images/Logo.svg" alt="Frosted Glass Effect" />
+      <div class="frosted-overlay"></div>
+    </div>
+  </body>
+</html>
