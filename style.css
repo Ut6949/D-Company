@@ -30,3 +30,10 @@
   color: #545454;
   background-color: #ffc107;
 }
+#side_banner {
+  background-color: aliceblue;
+  display: block;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
