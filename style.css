@@ -3,10 +3,15 @@
 }
 #navbar {
   background-color: aliceblue;
+  border-bottom: 2px solid black;
+}
+#button_navbar {
+  border-bottom: 2px solid #ffc107;
+  border-top: 2px solid #ffc107;
 }
 #search_bar {
   border: 0px solid #545454;
-  border-radius: 5px;
+  border-radius: 5p;
 }
 
 #search_field {
