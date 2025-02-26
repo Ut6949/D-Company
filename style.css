@@ -5,7 +5,7 @@
   background-color: aliceblue;
 }
 #search_bar {
-  border: none;
+  border: 0px solid #545454;
   border-radius: 5px;
 }
 
