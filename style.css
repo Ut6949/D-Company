@@ -17,7 +17,11 @@
   background-color: black;
   border-bottom: 2px solid #ffc107;
   border-top: 2px solid #ffc107;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }
+
 #search_bar {
   border: 0px solid #545454;
   border-radius: 5p;
