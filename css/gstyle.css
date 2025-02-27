@@ -1,0 +1,54 @@
+#body {
+    background-color: #6e6e6e;
+  }
+  /* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url(../Images/Gallery/0.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  color: black;
+}
+
+.hero-section .hero-text h1 {
+  font-size: 3em;
+}
+
+.hero-section .hero-text p {
+  font-size: 1.5em;
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}

@@ -13,6 +13,9 @@
   background-color: aliceblue;
   border-bottom: 2px solid black;
 }
+#lower_navbar{
+  position: sticky; top: 0px; z-index: 2
+}
 #button_navbar {
   background-color: black;
   border-bottom: 2px solid #ffc107;
