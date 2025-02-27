@@ -70,9 +70,9 @@ document.getElementById("lower_navbar").innerHTML=`<nav class="navbar navbar-exp
                   id="nav_drop"
                   aria-labelledby="navbarDropdown"
                 >
-                  <li><a class="dropdown-item" href="#">Residential</a></li>
-                  <li><a class="dropdown-item" href="#">Commercial</a></li>
-                  <li><a class="dropdown-item" href="#">Industrial</a></li>
+                  <li><a class="dropdown-item" href="projectsr.html">Residential</a></li>
+                  <li><a class="dropdown-item" href="projectsc.html">Commercial</a></li>
+                  <li><a class="dropdown-item" href="projectsi.html">Industrial</a></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a class="dropdown-item" href="gallery.html">Gallery</a>
