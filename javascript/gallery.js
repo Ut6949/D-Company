@@ -1,5 +1,5 @@
 let images = [
-    {img:"Images/Gallery/1.jpg"},
+    
     {img:"Images/Gallery/2.jpg"},
     {img:"Images/Gallery/3.jpg"},
     {img:"Images/Gallery/4.jpg"},
