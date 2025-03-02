@@ -1,7 +1,10 @@
 #body {
-    background-color: #6e6e6e;
-  }
-  /* Hero Section */
+  background-color: #6e6e6e;
+}
+#gallery {
+  opacity: 0.7;
+}
+/* Hero Section */
 .hero-section {
   position: relative;
   width: 100%;
