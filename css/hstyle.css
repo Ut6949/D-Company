@@ -1,4 +1,3 @@
-
 #side_banner {
   background-color: none;
   border-radius: 5px;
@@ -32,8 +31,10 @@
   -webkit-backdrop-filter: blur(0px); /* For Safari support */
 }
 
-#service {
-  font-size: xx-large;
+#services {
+  font-size: 40px;
+  text-shadow: 4px 4px 12px #231f20;
+  color: #ffc107aa;
 }
 .card {
   box-shadow: 2px 4px 36px 8px #231f20;
