@@ -1,9 +1,9 @@
-@font-face{
-  font-family: 'lora_variable';
-  src: url(Lora/Lora-Italic-VariableFont_wght.ttf)
+@font-face {
+  font-family: "lora_variable";
+  src: url(Lora/Lora-Italic-VariableFont_wght.ttf);
 }
-*{
-  font-family: 'lora_variable';
+* {
+  font-family: "lora_variable";
   font-style: normal;
 }
 #body {
@@ -13,8 +13,10 @@
   background-color: aliceblue;
   border-bottom: 2px solid black;
 }
-#lower_navbar{
-  position: sticky; top: 0px; z-index: 2
+#lower_navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }
 #button_navbar {
   background-color: black;
@@ -59,7 +61,7 @@
   color: #545454;
   background-color: #ffc107;
 }
-#toggle_icon{
+#toggle_icon {
   background-color: #545454;
   border: 2px solid #ffc107;
   border-radius: 5px;
@@ -69,7 +71,7 @@
   transition: all 0.7s ease;
   border-radius: 5px;
 }
-#home:hover{
+#home:hover {
   color: black;
   background-color: #ffc107;
 }
@@ -78,7 +80,7 @@
   transition: all 0.7s ease;
   border-radius: 5px;
 }
-#navbarDropdown:hover{
+#navbarDropdown:hover {
   color: black;
   background-color: #ffc107;
 }
@@ -87,7 +89,7 @@
   transition: all 0.7s ease;
   border-radius: 5px;
 }
-#aboutus:hover{
+#aboutus:hover {
   color: black;
   background-color: #ffc107;
 }
@@ -96,39 +98,9 @@
   transition: all 0.7s ease;
   border-radius: 5px;
 }
-#contact:hover{
+#contact:hover {
   color: black;
   background-color: #ffc107;
 }
-#side_banner {
-  background-color: none;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  position: relative;
-}
-#sidebar {
-  background-color: aliceblue;
-  margin: 10px;
-  border-radius: 5px;
-  box-shadow: 2px 4px 36px 8px #ffc107aa;
-}
-#frosted-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.092); /* Semi-transparent */
-  backdrop-filter: blur(10px); /* The blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 2s ease;
-}
-#frosted-overlay:hover {
-  backdrop-filter: blur(0px); /* The blur effect */
-  -webkit-backdrop-filter: blur(0px); /* For Safari support */
-}
+
+
