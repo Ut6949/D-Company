@@ -39,3 +39,6 @@
 .card {
   box-shadow: 2px 4px 36px 8px #231f20;
 }
+.card-text {
+  text-align: justify;
+}
