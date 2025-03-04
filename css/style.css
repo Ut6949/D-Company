@@ -102,7 +102,9 @@
   color: black;
   background-color: #ffc107;
 }
-
+#footer {
+  background-color: aliceblue;
+}
 a {
   text-decoration: none;
 }
