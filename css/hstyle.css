@@ -1,6 +1,6 @@
 #side_banner {
   background-color: none;
-  border-radius: 5px;
+  border-radius: 0px 0px 10px 10px;
   display: flex;
   justify-content: center;
   justify-items: center;
