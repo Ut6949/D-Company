@@ -3,7 +3,7 @@
   src: url(Lora/Lora-Italic-VariableFont_wght.ttf);
 }
 * {
-  font-family: "lora_variable";
+  font-family: "lora_variable", "Times New Roman", Times, serif;
   font-style: normal;
 }
 #body {
