@@ -7,7 +7,7 @@
   src: url(Crimson_Text/CrimsonText-Regular.ttf);
 }
 * {
-  font-family: "lora_variable", "Crimson_text";
+  font-family: "lora_variable", "Crimson_text", "Times New Roman", Times, serif;
   font-style: normal;
 }
 #body {
