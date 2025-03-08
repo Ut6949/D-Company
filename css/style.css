@@ -2,8 +2,12 @@
   font-family: "lora_variable";
   src: url(Lora/Lora-Italic-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: "Crimson_text";
+  src: url(Crimson_Text/CrimsonText-Regular.ttf);
+}
 * {
-  font-family: "lora_variable", "Times New Roman", Times, serif;
+  font-family: "lora_variable", "Crimson_text";
   font-style: normal;
 }
 #body {
