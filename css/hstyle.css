@@ -10,7 +10,7 @@
   background-color: aliceblue;
   margin: 10px;
   border-radius: 0px 0px 10px 10px;
-  box-shadow: 2px 4px 36px 8px #ffc107aa;
+  box-shadow: 2px 4px 36px 8px #ffc107;
 }
 #frosted-overlay {
   position: absolute;
@@ -33,8 +33,8 @@
 
 #services {
   font-size: 40px;
-  text-shadow: 4px 4px 12px #231f20;
-  color: #ffc107aa;
+  text-shadow: 5px 10px 10px #231f20;
+  color: #ffc107;
 }
 .services_card {
   box-shadow: 2px 4px 36px 8px #231f20;

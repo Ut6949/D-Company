@@ -1,0 +1,14 @@
+#banner {
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 2px 4px 36px 8px #231f20;
+}
+.sect_heading {
+  color: #ffc107;
+  text-shadow: 5px 10px 10px #231f20;
+}
+.sect_text {
+  color: aliceblue;
+  text-align: justify;
+  margin: 0px;
+  font-size: x-large;
+}
