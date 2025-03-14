@@ -12,3 +12,8 @@
   margin: 0px;
   font-size: x-large;
 }
+@media screen and (max-width: 768px) {
+  .sect_text {
+    font-size: medium;
+  }
+}
