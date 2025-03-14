@@ -11,9 +11,13 @@
   text-align: justify;
   margin: 0px;
   font-size: x-large;
+  text-indent: 20px;
 }
 @media screen and (max-width: 768px) {
   .sect_text {
     font-size: medium;
   }
+}
+strong {
+  color: #ffc107;
 }
