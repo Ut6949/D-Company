@@ -54,7 +54,7 @@ let services = [
   { id:6,
     img:"Images/B2B.svg",
     card_title:"Business to Business",
-    card_text:"At The Capture Construction, our architectural services focus on innovative designs that balance functionality and aesthetics. We work closely with clients to develop creative solutions tailored to their vision and project requirements."},
+    card_text:"We deliver high-quality B2B construction solutions for commercial, industrial, and infrastructure projects. Our expert team ensures seamless execution, safety compliance, and cost-efficient results—on time and within budget."},
   ]
 
 for (let service = 0; service <services.length; service++ ){
