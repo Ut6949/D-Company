@@ -19,7 +19,7 @@ function typeEffect() {
     setTimeout(typeEffect, 50);
   } else {
     isDeleting = !isDeleting;
-    setTimeout(typeEffect, 2000); // Pause before retyping
+    setTimeout(typeEffect, 1000); // Pause before retyping
   }
 }
 
