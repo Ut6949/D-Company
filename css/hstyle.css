@@ -36,6 +36,16 @@
   text-shadow: 5px 10px 10px #231f20;
   color: #ffc107;
 }
+@media screen and (max-width: 768px) {
+  #services {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #services {
+    font-size: 30px;
+  }
+}
 .services_card {
   box-shadow: 2px 4px 36px 8px #231f20;
 }
