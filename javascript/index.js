@@ -1,4 +1,4 @@
-const text = "We Shape Your Dreams...!";
+const text = "WE SHAPE YOUR DREAMS...!";
   let index = 0;
   let isDeleting = false;
 
@@ -15,7 +15,7 @@ const text = "We Shape Your Dreams...!";
       setTimeout(typeEffect, 50);
     } else {
       isDeleting = !isDeleting;
-      setTimeout(typeEffect, 1000); // Pause before retyping
+      setTimeout(typeEffect, 4000); // Pause before retyping
     }
   }
 
