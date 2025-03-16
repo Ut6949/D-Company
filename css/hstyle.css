@@ -34,7 +34,7 @@
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -44,7 +44,7 @@
 }
 
 #dynamic-text {
-  font-size: 40px;
+  font-size: 80px;
   text-shadow: 5px 10px 10px #231f20;
   font-weight: 200px;
   color: aliceblue;
@@ -65,17 +65,17 @@
 
 @media screen and (max-width: 992px) {
   #dynamic-text {
-    font-size: 30px;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 768px) {
   #dynamic-text {
-    font-size: 25px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 576px) {
   #dynamic-text {
-    font-size: 20px;
+    font-size: 40px;
   }
 }
 

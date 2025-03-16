@@ -1,4 +1,4 @@
-const text = "WE SHAPE YOUR DREAMS...!";
+const text = "WE SHAPE <br> YOUR <br> DREAMS...!";
   let index = 0;
   let isDeleting = false;
 
