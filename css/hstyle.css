@@ -44,7 +44,7 @@
 }
 
 #dynamic-text {
-  font-size: 80px;
+  font-size: 60px;
   text-shadow: 5px 10px 10px #231f20;
   font-weight: 200px;
   color: aliceblue;
@@ -65,17 +65,17 @@
 
 @media screen and (max-width: 992px) {
   #dynamic-text {
-    font-size: 50px;
+    font-size: 45px;
   }
 }
 @media screen and (max-width: 768px) {
   #dynamic-text {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 @media screen and (max-width: 576px) {
   #dynamic-text {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 

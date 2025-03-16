@@ -15,7 +15,7 @@ const text = "WE SHAPE <br> YOUR <br> DREAMS...!";
       setTimeout(typeEffect, 50);
     } else {
       isDeleting = !isDeleting;
-      setTimeout(typeEffect, 4000); // Pause before retyping
+      setTimeout(typeEffect, 1000); // Pause before retyping
     }
   }
 
