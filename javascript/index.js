@@ -1,26 +1,30 @@
-const text = "WE SHAPE <br> YOUR <br> DREAMS...!";
-  let index = 0;
-  let isDeleting = false;
+// Use \n where you want line breaks in the text
+const text = "We Shape \n Your \n Dreams...!";
+let index = 0;
+let isDeleting = false;
 
-  function typeEffect() {
-    let dynamicText = document.getElementById("dynamic-text");
+function typeEffect() {
+  let dynamicText = document.getElementById("dynamic-text");
 
-    if (!isDeleting && index < text.length) {
-      dynamicText.innerHTML = text.substring(0, index + 1);
-      index++;
-      setTimeout(typeEffect, 100);
-    } else if (isDeleting && index > 0) {
-      dynamicText.innerHTML = text.substring(0, index - 1);
-      index--;
-      setTimeout(typeEffect, 50);
-    } else {
-      isDeleting = !isDeleting;
-      setTimeout(typeEffect, 1000); // Pause before retyping
-    }
+  // Replace '\n' with '<br>' to create line breaks
+  let displayText = text.substring(0, index).replace(/\n/g, "<br>");
+
+  dynamicText.innerHTML = displayText;
+
+  if (!isDeleting && index < text.length) {
+    index++;
+    setTimeout(typeEffect, 100);
+  } else if (isDeleting && index > 0) {
+    index--;
+    setTimeout(typeEffect, 50);
+  } else {
+    isDeleting = !isDeleting;
+    setTimeout(typeEffect, 1000); // Pause before retyping
   }
+}
 
-  // Add cursor class
-  document.getElementById("dynamic-text").classList.add("cursor");
+// Add cursor class
+document.getElementById("dynamic-text").classList.add("cursor");
 
-  // Start typing effect
-  typeEffect();
+// Start typing effect
+typeEffect();
