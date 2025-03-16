@@ -1,14 +1,23 @@
+const text = "We Shape Your Dreams";
+  let index = 0;
+  let isDeleting = false;
 
-      const text = "WE SHAPE YOUR DREAMS!";
-      let index = 0;
+  function typeEffect() {
+    let dynamicText = document.getElementById("dynamic-text");
 
-      function typeEffect() {
-        if (index < text.length) {
-          document.getElementById("dynamic-text").innerHTML +=
-            text.charAt(index);
-          index++;
-          setTimeout(typeEffect, 100); // Adjust speed here
-        }
-      }
+    if (!isDeleting && index < text.length) {
+      dynamicText.innerHTML = text.substring(0, index + 1);
+      index++;
+      setTimeout(typeEffect, 100);
+    } else if (isDeleting && index > 0) {
+      dynamicText.innerHTML = text.substring(0, index - 1);
+      index--;
+      setTimeout(typeEffect, 50);
+    } else {
+      isDeleting = !isDeleting;
+      setTimeout(typeEffect, 1000); // Pause before retyping
+    }
+  }
 
-      typeEffect();
+  // Start typing effect
+  typeEffect();
