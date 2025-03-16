@@ -1,4 +1,4 @@
-const text = "We Shape Your Dreams";
+const text = "We Shape Your Dreams...!";
   let index = 0;
   let isDeleting = false;
 
@@ -18,6 +18,9 @@ const text = "We Shape Your Dreams";
       setTimeout(typeEffect, 1000); // Pause before retyping
     }
   }
+
+  // Add cursor class
+  document.getElementById("dynamic-text").classList.add("cursor");
 
   // Start typing effect
   typeEffect();

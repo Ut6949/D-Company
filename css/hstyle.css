@@ -42,24 +42,27 @@
   height: 100%;
   padding: 20px 50px;
 }
+
 #dynamic-text {
   font-size: 40px;
   text-shadow: 5px 10px 10px #231f20;
   font-weight: 200px;
   color: aliceblue;
-  border-right: 2px solid aliceblue; /* Blinking cursor */
+
   display: inline-block;
   white-space: nowrap;
 }
 @keyframes blink {
   50% {
-    border-color: transparent;
+    opacity: 0;
   }
 }
-
-#dynamic-text.blink {
+/* Cursor style */
+.cursor::after {
+  content: "_"; /* Underscore cursor */
   animation: blink 0.7s infinite;
 }
+
 @media screen and (max-width: 992px) {
   #dynamic-text {
     font-size: 30px;
@@ -75,6 +78,7 @@
     font-size: 20px;
   }
 }
+
 #services {
   font-size: 40px;
   text-shadow: 5px 10px 10px #231f20;
