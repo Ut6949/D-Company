@@ -18,7 +18,7 @@ document.getElementById("navbar").innerHTML=`<div class="container">
                       class="px-2 py-1"
                       id="search_field"
                       type="search"
-                      placeholder="Search"
+                      placeholder="Search..."
                       aria-label="Search"
                     />
                     <button class="py-1 px-3" id="search_btn" type="submit">

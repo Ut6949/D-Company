@@ -33,9 +33,7 @@ let card = [
             src="${card[cards].img}"
             alt=""
             class="img-fluid rounded-start-3"
-            height="100vh"
-            width="200px"
-            style="display=flex; justify-content=center;"
+            style="max-width: 100%; height: auto;"
           />
           <div class="card-body bg-light rounded-end-3 p-3  ">
             <h5 class="card-title ">${card[cards].name}</h5>
