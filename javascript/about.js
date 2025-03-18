@@ -28,19 +28,20 @@ let card = [
 
     for(let cards=0; cards<card.length; cards++){
         document.getElementById("profile_card").innerHTML+=`
-        <div class="col-md-6 col-sm-12 d-xl-flex d-lg-flex d-md-block d-sm-block d-block g-4 " id="profile_card">
+        <div class="col-md-6 col-sm-12 d-xl-flex d-lg-block d-md-block d-sm-block d-block " id="profile_card">
             <img
             src="${card[cards].img}"
             alt=""
-            class="img-fluid rounded-start-3 h-100"
-            height="200px"
+            class="img-fluid rounded-start-3"
+            height="100vh"
             width="200px"
+            style="display=flex; justify-content=center;"
           />
-          <div class="card-body bg-light rounded-end-3 p-3 ">
+          <div class="card-body bg-light rounded-end-3 p-3  ">
             <h5 class="card-title ">${card[cards].name}</h5>
             <hr />
             <h6 class="card-subtitle mb-2 text-muted">${card[cards].des}</h6>
-            <p class="card-text h-100">${card[cards].intro}</p>
+            <p class="card-text ">${card[cards].intro}</p>
           </div>
-          </div>
+        </div>
         ` }
