@@ -7,7 +7,7 @@ let card = [
     intro:'Is a seasoned <strong>3D Visualizer</strong> with vast experience in architectural visualization and construction design.'},
     {
     id:2,
-    img: 'Images/Farhan Profile.svg',
+    img: 'Images/Haris Profile.svg',
     name:'Mr. Muhammad Haris Mughal',
     des:'Architect /Interior Designer',
     intro:'An accomplished <strong>Architect and Interior Designer</strong>, brings creativity and expertise to innovative architectural and interior design solutions.'},
@@ -28,18 +28,19 @@ let card = [
 
     for(let cards=0; cards<card.length; cards++){
         document.getElementById("profile_card").innerHTML+=`
-        <div class="col-md-6 col-sm-12 d-xl-flex d-lg-block d-md-block d-sm-block d-block " id="profile_card">
-            <img
-            src="${card[cards].img}"
-            alt=""
-            class="img-fluid rounded-start-3"
-            style="max-width: 100%; height: auto;"
-          />
-          <div class="card-body bg-light rounded-end-3 p-3  ">
-            <h5 class="card-title ">${card[cards].name}</h5>
-            <hr />
-            <h6 class="card-subtitle mb-2 text-muted">${card[cards].des}</h6>
-            <p class="card-text ">${card[cards].intro}</p>
+        
+          <div class="col">
+            <div class="card h-100">
+              <img src="${card[cards].img}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">${card[cards].name}</h5>
+                <hr />
+                <h3>${card[cards].des}</h3>
+                <p class="card-text">${card[cards].intro}</p>
+              </div>
+            </div>
           </div>
-        </div>
+        
         ` }
+
+        

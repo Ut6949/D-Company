@@ -21,3 +21,18 @@
 strong {
   color: #ffc107;
 }
+
+.swiper-container {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  width: 300px; /* Adjust width */
+  background-color: aliceblue;
+}
+
+/* Smooth transition */
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
