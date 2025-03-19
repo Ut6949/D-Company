@@ -30,7 +30,7 @@ let card = [
         document.getElementById("profile_card").innerHTML+=`
         
           <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-            <div class="card h-100">
+            <div class="card h-100" id="profile-card">
               <img src="${card[cards].img}" class="card-img-top" alt="..." style="height:auto; max-width:100pc"/>
               <div class="card-body">
                 <h6 class="card-title">${card[cards].name}</h6>

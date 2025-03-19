@@ -8,16 +8,19 @@
 }
 .sect_text {
   color: aliceblue;
-  text-align: justify;
+  text-align:justify;
   margin: 0px;
   font-size: x-large;
   text-indent: 20px;
 }
 @media screen and (max-width: 768px) {
   .sect_text {
-    font-size: medium;
+    font-size: small;
   }
 }
 strong {
   color: #ffc107;
+}
+#profile-card{
+  box-shadow: 2px 4px 36px 8px #231f20;
 }
