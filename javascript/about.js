@@ -22,20 +22,20 @@ let card = [
     id:4,
     img: 'Images/Farhan Profile.svg',
     name:'Mr. Hamza Jameel',
-    des:'Site Surveyor/Draftsman',
+    des:'Site Surveyor /Draftsman',
     intro:'A proficient <strong>Site Surveyor and Draftsman</strong>, specializes in precise site assessments and detailed technical drawings for accurate project execution.'
     }]
 
     for(let cards=0; cards<card.length; cards++){
         document.getElementById("profile_card").innerHTML+=`
         
-          <div class="col">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <div class="card h-100">
-              <img src="${card[cards].img}" class="card-img-top" alt="..." />
+              <img src="${card[cards].img}" class="card-img-top" alt="..." style="height:auto; max-width:100pc"/>
               <div class="card-body">
-                <h5 class="card-title">${card[cards].name}</h5>
+                <h6 class="card-title">${card[cards].name}</h6>
                 <hr />
-                <h3>${card[cards].des}</h3>
+                <h4>${card[cards].des}</h4>
                 <p class="card-text">${card[cards].intro}</p>
               </div>
             </div>
