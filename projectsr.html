@@ -26,6 +26,88 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+    /* General Styling */
+      
+      h1 {
+          font-size: 3rem;
+          font-weight: bold;
+          color: #007bff;
+          text-align: center;
+          margin: 30px 0;
+          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-container {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+       grid-auto-rows: 200px;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+       padding: 20px;
+      }
+
+      .gallery-item {
+          position: relative;
+          overflow: hidden;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .gallery-item img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: brightness(95%);
+          transition: 0.2s ease-in ;
+      }
+
+      .gallery-item.vertical {
+          grid-row: span 2;
+      }
+
+      .gallery-item.horizontal {
+          grid-column: span 2;
+      }
+
+      .gallery-item:hover {
+          transform: scale(1.05);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+          filter: brightness(100%);
+      }
+
+      .gallery-item:hover img {
+          transform: scale(1.1);
+      }
+
+       /* Responsive Design */
+       @media (max-width: 768px) {
+          .gallery-container {
+              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+              gap: 10px;
+          }
+
+          .gallery-item.vertical {
+              grid-row: span 1;
+          }
+
+          .gallery-item.horizontal {
+              grid-column: span 1;
+          }
+      }
+
+      @media (max-width: 480px) {
+          .gallery-container {
+              grid-template-columns: 1fr;
+          }
+
+          h1 {
+              font-size: 2rem;
+          }
+      }
+      </style>
   </head>
 
   <body id="body">
@@ -33,139 +115,7 @@
     <div class="container-fluid" id="navbar"></div>
     <header id="lower_navbar"></header>
     <main>
-      <!-- <div class="gallery_1" unique-script-id="w-w-dm-id">
-        <div class="responsive-container-block bigContainer">
-          <div class="responsive-container-block Container">
-            <p class="text-blk heading">Gallery</p>
-            <p class="text-blk subHeading">
-              Lorem ipsum dolor sit amet, consect etur adip iscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna al
-            </p>
-            <div class="responsive-container-block imgContainer">
-              <div class="project project1">
-                <img
-                  class="smallImage"
-                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb2.png"
-                />
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">Close X</button>
-                    <div class="hdImgs">
-                      <img
-                        class="squareImg"
-                        src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb2.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">View</button>
-                </div>
-              </div>
-              <div class="project project2">
-                <img
-                  class="smallImage"
-                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb7.png"
-                />
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">Close X</button>
-                    <div class="hdImgs">
-                      <img
-                        class="squareImg"
-                        src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb7.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">View</button>
-                </div>
-              </div>
-              <div class="project project3">
-                <img
-                  class="smallImage"
-                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb3.png"
-                />
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">Close X</button>
-                    <div class="hdImgs">
-                      <img
-                        class="squareImg"
-                        src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb3.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">View</button>
-                </div>
-              </div>
-              <div class="project project4">
-                <img
-                  class="smallImage"
-                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb6.png"
-                />
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">Close X</button>
-                    <div class="hdImgs">
-                      <img
-                        class="squareImg"
-                        src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb6.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">View</button>
-                </div>
-              </div>
-              <div class="project project5">
-                <img
-                  class="smallImage"
-                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb4.png"
-                />
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">Close X</button>
-                    <div class="hdImgs">
-                      <img
-                        class="squareImg"
-                        src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb4.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">View</button>
-                </div>
-              </div>
-              <div class="project project6">
-                <img
-                  class="smallImage"
-                  src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb5.png"
-                />
-                <div class="overlay">
-                  <div class="overlay-inner">
-                    <button class="close">Close X</button>
-                    <div class="hdImgs">
-                      <img
-                        class="squareImg"
-                        src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb5.png"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <button class="btn">View</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+     
     </main>
     <footer>
       <!-- place footer here -->
