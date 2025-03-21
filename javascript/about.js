@@ -35,7 +35,7 @@ let card = [
               <div class="card-body">
                 <h6 class="card-title">${card[cards].name}</h6>
                 <hr />
-                <h4>${card[cards].des}</h4>
+                <h5>${card[cards].des}</h5>
                 <p class="card-text">${card[cards].intro}</p>
               </div>
             </div>
