@@ -187,10 +187,13 @@ document.getElementById("lower_navbar").innerHTML=`<nav class="navbar navbar-exp
                   >Industrial Projects</a
                 >
               </p>
+              <h6 class="text-uppercase fw-bold mb-4"><a href="projectsi.html" class="text-reset text-decoration-none"
+                  >Feedback</a
+                ></h6>
             </div>
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 my-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
               <p>
                 <i class="fas fa-home me-3"></i> Shah-Faisal-Colony#03, Alfalah
                 Society
@@ -202,4 +205,6 @@ document.getElementById("lower_navbar").innerHTML=`<nav class="navbar navbar-exp
               <p><i class="fas fa-phone me-3"></i> + 92 333 335 6062</p>
             </div>
           </div>
-        </div>`
+        </div>
+        
+        `
