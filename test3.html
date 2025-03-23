@@ -234,22 +234,23 @@
         <div class="swiper-container mt-3">
             <div
                 class="swiper-wrapper"
-                style="display: flex; justify-content: center"
+                style="display: flex; justify-content: center; "
             >
-                <div class="swiper-slide">
-                    <div class="card px-5" id="mission-card">
+                <div class="swiper-slide" >
+                    <div class="card px-5 border-0" id="mission-card">
                         <img
                         src="Images/P1.svg"
                         class="card-img-top img-fluid mx-auto"
                         style="height: 200px; width: 200px"
                         />
-                        <div class="card-body" style="padding-top: 0">
+                        <div class="card-body px-5" style="padding-top: 0">
                             <h5
                                 class="card-title"
                                 style="
                                 display: flex;
                                 justify-content: center;
                                 margin-top: 0;
+                                
                                 "
                             >
                                 Project Completion
@@ -267,7 +268,7 @@
                             width: 200px;
                         "
                         />
-                        <div class="card-body" style="padding-top: 0">
+                        <div class="card-body px-5" style="padding-top: 0">
                             <h5
                                 class="card-title text-center"
                                 style="
@@ -288,7 +289,7 @@
                         class="card-img-top img-fluid mx-auto"
                         style="height: 200px; width: 200px"
                         />
-                        <div class="card-body" style="padding-top: 0">
+                        <div class="card-body px-5" style="padding-top: 0">
                             <h5
                                 class="card-title text-center"
                                 style="
@@ -304,54 +305,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div
-          class="card-group mt-3 mx-5 mx-sm-0"
-          style="box-shadow: 2px 4px 36px 8px #231f20"
-        >
-            <div class="card">
-                <img
-                src="Images/P1.svg"
-                class="card-img-top my-2"
-                alt="..."
-                height="200px"
-                width="200px"
-                />
-                <div class="card-body d-flex justify-content-center pt-0">
-                <h5 class="card-title pt-0 mb-3" style="text-align: center">
-                    Projects Completion
-                </h5>
-                </div>
-            </div>
-            <div class="card">
-                <img
-                src="Images/P2.svg"
-                class="card-img-top my-2"
-                alt="..."
-                height="200px"
-                width="200px"
-                />
-                <div class="card-body d-flex justify-content-center pt-0">
-                <h5 class="card-title pt-0 mb-3" style="text-align: center">
-                    Client’s Satisfaction
-                </h5>
-                </div>
-            </div>
-            <div class="card">
-                <img
-                src="Images/P3.svg"
-                class="card-img-top my-2"
-                alt="..."
-                height="200px"
-                width="200px"
-                />
-                <div class="card-body d-flex justify-content-center pt-0">
-                <h5 class="card-title pt-0 mb-3" style="text-align: center">
-                    Customer Support
-                </h5>
-                </div>
-            </div>
-        </div> -->
       </div>
       <!-- Services Section Ends Here -->
       <!-- Completed Projects Section Starts Here -->
@@ -384,19 +337,17 @@
     <script src="javascript/index.js"></script>
     <script>
       var swiper = new Swiper(".swiper-container", {
-  slidesPerView: "auto", // Automatically adjust based on container width
-  spaceBetween: 0, // No gaps between cards
-  loop: true, // Enable infinite scrolling
-  freeMode: true, // Allow continuous smooth movement
-  autoplay: {
-    delay: 0, // No delay, continuous scrolling
-    disableOnInteraction: false,
-  },
-  speed: 7000, // Slow and smooth scrolling
-  allowTouchMove: false, // Disable manual sliding for smooth effect
-});
-
-
+      slidesPerView: "auto", // Automatically adjust based on container width
+      spaceBetween: 0, // No gaps between cards
+      loop: true, // Enable infinite scrolling
+      freeMode: true, // Allow continuous smooth movement
+      autoplay: {
+        delay: 0, // No delay, continuous scrolling
+        disableOnInteraction: false,
+      },
+      speed: 7000, // Slow and smooth scrolling
+      allowTouchMove: false, // Disable manual sliding for smooth effect
+    });
     </script>
   </body>
 </html>
