@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1.0"
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/hstyle.css" />
@@ -35,16 +35,25 @@
       .swiper-container {
         width: 100%;
         padding: 20px 0;
-      }
+        }
 
-      .swiper-slide {
-        width: 300px; /* Adjust width */
-      }
+        .swiper-slide {
+        width: auto !important; /* Allow it to adjust dynamically */
+        max-width: 100%; /* Prevent overflow */
+        }
 
-      /* Smooth transition */
-      .swiper-wrapper {
-        transition-timing-function: linear !important;
-      }
+        #mission-card {
+        width: 100%; /* Ensure cards fit inside the slider */
+        max-width: 300px; /* Adjust max width to prevent stretching */
+        margin: auto; /* Center the cards */
+        }
+
+        @media (max-width: 768px) {
+        .swiper-slide {
+            width: 90% !important; /* Adjust width on smaller screens */
+        }
+        }
+
     </style>
   </head>
 
@@ -227,85 +236,80 @@
             <h1 class="text-fluid" id="services">OUR MOTIVE</h1>
           </div>
         </div>
+      </div>
 
         <div class="swiper-container">
-          <div
-            class="swiper-wrapper"
-            style="display: flex; justify-content: center"
-          >
-            <div class="swiper-slide">
-              <div class="card">
-                <img
-                  src="Images/P1.svg"
-                  class="card-img-top img-fluid mx-auto"
-                  style="height: 200px; width: 200px"
-                  height="200px"
-                  width="200px"
-                />
-                <div class="card-body" style="padding-top: 0">
-                  <h5
-                    class="card-title"
-                    style="
-                      display: flex;
-                      justify-content: center;
-                      margin-top: 0;
-                    "
-                  >
-                    Project Completion
-                  </h5>
+            <div
+                class="swiper-wrapper"
+                style="display: flex; justify-content: center"
+            >
+                <div class="swiper-slide">
+                    <div class="card" id="mission-card">
+                        <img
+                        src="Images/P1.svg"
+                        class="card-img-top img-fluid mx-auto"
+                        style="height: 200px; width: 200px"
+                        />
+                        <div class="card-body" style="padding-top: 0">
+                            <h5
+                                class="card-title"
+                                style="
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 0;
+                                "
+                            >
+                                Project Completion
+                            </h5>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card" style="display: flex; justify-content: center">
-                <img
-                  src="Images/P2.svg"
-                  class="card-img-top img-fluid mx-auto"
-                  style="
-                    display: flex;
-                    justify-content: center;
-                    height: 200px;
-                    width: 200px;
-                  "
-                />
-                <div class="card-body" style="padding-top: 0">
-                  <h5
-                    class="card-title text-center"
-                    style="
-                      display: flex;
-                      justify-content: center;
-                      margin-top: 0;
-                    "
-                  >
-                    Client's Satisfaction
-                  </h5>
+                <div class="swiper-slide">
+                    <div class="card" id="mission-card">
+                        <img
+                        src="Images/P2.svg"
+                        class="card-img-top img-fluid mx-auto"
+                        style="
+                            height: 200px;
+                            width: 200px;
+                        "
+                        />
+                        <div class="card-body" style="padding-top: 0">
+                            <h5
+                                class="card-title text-center"
+                                style="
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 0;
+                                "
+                            >
+                                Client's Satisfaction
+                            </h5>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card">
-                <img
-                  src="Images/P3.svg"
-                  class="card-img-top img-fluid mx-auto"
-                  style="height: 200px; width: 200px"
-                  height="200px"
-                  width="200px"
-                />
-                <div class="card-body" style="padding-top: 0">
-                  <h5
-                    class="card-title text-center"
-                    style="
-                      display: flex;
-                      justify-content: center;
-                      margin-top: 0;
-                    "
-                  >
-                    Customer Support
-                  </h5>
+                <div class="swiper-slide">
+                    <div class="card" id="mission-card">
+                        <img
+                        src="Images/P3.svg"
+                        class="card-img-top img-fluid mx-auto"
+                        style="height: 200px; width: 200px"
+                        />
+                        <div class="card-body" style="padding-top: 0">
+                            <h5
+                                class="card-title text-center"
+                                style="
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 0;
+                                "
+                            >
+                                Customer Support
+                            </h5>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
 
         <!-- <div
@@ -387,16 +391,21 @@
     <script src="javascript/index.js"></script>
     <script>
       var swiper = new Swiper(".swiper-container", {
-        slidesPerView: "auto",
-        spaceBetween: 0,
-        loop: true,
-        autoplay: {
-          delay: 0 /* No delay */,
-          disableOnInteraction: false,
-        },
-        speed: 5000 /* Slow, smooth movement */,
-        allowTouchMove: true,
-      });
+  slidesPerView: 1, /* Default to 1 slide */
+  spaceBetween: 0, /* Reduce spacing */
+  loop: true,
+  autoplay: {
+    delay: 3000, /* Smooth auto-slide */
+    disableOnInteraction: false,
+  },
+  speed: 1500, /* Slower transition for better UX */
+  breakpoints: {
+    576: { slidesPerView: 2, spaceBetween: 0 }, /* Small screens */
+    768: { slidesPerView: 3, spaceBetween: 0 }, /* Medium screens */
+    992: { slidesPerView: 3, spaceBetween: 0 }, /* Large screens */
+  },
+});
+
     </script>
   </body>
 </html>
