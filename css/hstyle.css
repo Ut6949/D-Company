@@ -99,3 +99,17 @@
 .card-text {
   text-align: justify;
 }
+
+.swiper-container {
+  width: 100%;
+  overflow: hidden; /* Hide overflow */
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important; /* Smooth scrolling */
+}
+
+.swiper-slide {
+  width: auto !important; /* Let slides adjust dynamically */
+  flex-shrink: 0; /* Prevent shrinking */
+}
