@@ -82,7 +82,7 @@ for (let service = 0; service <services.length; service++ ){
 
 var swiper = new Swiper(".swiper-container", {
   slidesPerView: "auto", // Automatically adjust based on container width
-  spaceBetween: 0, // No gaps between cards
+  spaceBetween: 16, // No gaps between cards
   loop: true, // Enable infinite scrolling
   freeMode: true, // Allow continuous smooth movement
   autoplay: {
