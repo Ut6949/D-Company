@@ -128,7 +128,7 @@
         const service = document.getElementById("serviceSelect").value;
         const propertyType = document.getElementById("propertyTypeSelect").value;
         const areaUnit = document.getElementById("areaUnitSelect").value;
-        const coveredArea = document.getElementById("validationCustom05").value;
+        const coveredArea = document.getElementById("validationCustomcoveredArea").value;
     
         // Construct WhatsApp message
         const message = `Hello, I would like to get a quote:\n\n`
