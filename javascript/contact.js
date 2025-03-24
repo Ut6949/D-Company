@@ -112,3 +112,44 @@
         option.textContent = unit;
         areaUnitSelect.appendChild(option);
     });
+
+
+    document.getElementById("contact_form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        // Get form values
+        const firstName = document.getElementById("validationCustom01").value;
+        const lastName = document.getElementById("validationCustom02").value;
+        const email = document.getElementById("validationCustomUsername").value;
+        const phone = document.getElementById("validationCustomPhone").value;
+        const province = document.getElementById("provinceSelect").value;
+        const city = document.getElementById("citySelect").value;
+        const zip = document.getElementById("validationCustom05").value;
+        const service = document.getElementById("serviceSelect").value;
+        const propertyType = document.getElementById("propertyTypeSelect").value;
+        const areaUnit = document.getElementById("areaUnitSelect").value;
+        const coveredArea = document.getElementById("validationCustom05").value;
+    
+        // Construct WhatsApp message
+        const message = `Hello, I would like to get a quote:\n\n`
+            + `*Personal Information:*\n`
+            + `Name: ${firstName} ${lastName}\n`
+            + `Email: ${email}\n`
+            + `Phone: ${phone}\n`
+            + `Province: ${province}\n`
+            + `City: ${city}\n`
+            + `Zip Code: ${zip}\n\n`
+            + `*Service Required:*\n`
+            + `Type of Service: ${service}\n`
+            + `Property Type: ${propertyType}\n`
+            + `Covered Area: ${coveredArea} ${areaUnit}`;
+    
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+    
+        // Replace with your desired WhatsApp number (format: country code + number, no spaces)
+        const whatsappNumber = "923001234567"; // Example: Pakistan number (923001234567)
+    
+        // Redirect to WhatsApp
+        window.open(`https://wa.me/${923330276949}?text=${encodedMessage}`, "_blank");
+    });
