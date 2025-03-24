@@ -99,7 +99,6 @@
                 class="form-control"
                 id="validationCustomUsername"
                 aria-describedby="inputGroupPrepend"
-                required
               />
 
               <div class="invalid-feedback">Please choose a Email Address.</div>
@@ -142,23 +141,34 @@
 
           <div class="col-md-4">
             <label for="validationCustom05" class="form-label">Zip</label>
-            <input
-              type="text"
-              class="form-control"
-              id="validationCustom05"
-              required
-            />
+            <input type="text" class="form-control" id="validationCustom05" />
             <div class="invalid-feedback">Please provide a valid zip.</div>
           </div>
-          <hr>
+          <hr />
           <h3>Service Required</h3>
-          
-          <div class="col-md-3">
-            <label for="serviceSelect" class="form-label">Service</label>
+
+          <div class="col-md-4">
+            <label for="serviceSelect" class="form-label"
+              >Type of Service</label
+            >
             <select class="form-select" id="serviceSelect" required>
-                <option selected disabled value="">Choose...</option>
+              <option selected disabled value="">Choose...</option>
             </select>
             <div class="invalid-feedback">Please select a valid service.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="propertyTypeSelect" class="form-label">Property Type</label>
+            <select class="form-select" id="propertyTypeSelect" required>
+                <option selected disabled value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid property type.</div>
+          </div>
+          <div class="col-md-3">
+            <label for="areaUnitSelect" class="form-label">Property Area Unit</label>
+            <select class="form-select" id="areaUnitSelect" required>
+                <option selected disabled value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid area unit.</div>
         </div>
 
           <div class="col-12">
@@ -235,23 +245,6 @@
     ></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/contact.js"></script>
-    <script>(() => {
-      'use strict'
-    
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      const forms = document.querySelectorAll('.needs-validation')
-    
-      // Loop over them and prevent submission
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-    
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()</script>
+    <script></script>
   </body>
 </html>

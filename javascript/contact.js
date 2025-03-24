@@ -1,4 +1,23 @@
 
+(() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+    
     // Provinces and their respective cities
     const provinceCities = {
         "Punjab": ["Lahore", "Faisalabad", "Rawalpindi", "Multan", "Gujranwala", "Sargodha", "Sialkot", "Bahawalpur", "Sheikhupura"],
@@ -58,4 +77,38 @@
         option.value = service;
         option.textContent = service;
         serviceSelect.appendChild(option);
+    });
+
+    // List of property types
+    const propertyTypes = [
+        "Plot", "House", "Flat", "Villa", "Shop", 
+        "Restaurant", "Factory", "Office"
+    ];
+
+    // Get the select element
+    const propertyTypeSelect = document.getElementById("propertyTypeSelect");
+
+    // Populate dropdown dynamically
+    propertyTypes.forEach(property => {
+        let option = document.createElement("option");
+        option.value = property;
+        option.textContent = property;
+        propertyTypeSelect.appendChild(option);
+    });
+
+    // List of area units
+    const areaUnits = [
+        "Square Feet (sqft)", "Square Yards (sqyd)", "Square Meters (sqm)", 
+        "Kanal", "Marla", "Acre", "Hectare"
+    ];
+
+    // Get the select element
+    const areaUnitSelect = document.getElementById("areaUnitSelect");
+
+    // Populate dropdown dynamically
+    areaUnits.forEach(unit => {
+        let option = document.createElement("option");
+        option.value = unit;
+        option.textContent = unit;
+        areaUnitSelect.appendChild(option);
     });
