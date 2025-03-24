@@ -157,20 +157,35 @@
             <div class="invalid-feedback">Please select a valid service.</div>
           </div>
           <div class="col-md-4">
-            <label for="propertyTypeSelect" class="form-label">Property Type</label>
+            <label for="propertyTypeSelect" class="form-label"
+              >Property Type</label
+            >
             <select class="form-select" id="propertyTypeSelect" required>
-                <option selected disabled value="">Choose...</option>
+              <option selected disabled value="">Choose...</option>
             </select>
-            <div class="invalid-feedback">Please select a valid property type.</div>
+            <div class="invalid-feedback">
+              Please select a valid property type.
+            </div>
           </div>
-          <div class="col-md-3">
-            <label for="areaUnitSelect" class="form-label">Property Area Unit</label>
+          <div class="col-md-2 col-sm-6">
+            <label for="areaUnitSelect" class="form-label">Area Unit</label>
             <select class="form-select" id="areaUnitSelect" required>
-                <option selected disabled value="">Choose...</option>
+              <option selected disabled value="">Choose...</option>
             </select>
             <div class="invalid-feedback">Please select a valid area unit.</div>
-        </div>
-
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <label for="validationCustom05" class="form-label">Covered Area</label>
+            <input
+              type="number"
+              class="form-control no-spinner"
+              id="validationCustom05"
+              required
+              min="0"
+              step="any"
+            />
+            <div class="invalid-feedback">Please provide a valid Area.</div>
+          </div>
           <div class="col-12">
             <div class="form-check">
               <input

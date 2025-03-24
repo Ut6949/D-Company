@@ -6,20 +6,30 @@
   background-color: aliceblue;
   box-shadow: 2px 4px 36px 8px #231f20;
   color: #231f20;
-  text-shadow: 5px 10px 10px #231f20;
+  text-shadow: 5px 10px 30px #231f20;
 }
 i {
   color: #ffc107;
 }
 #sect_heading {
   color: #ffc107;
-  text-shadow: 5px 10px 20px #231f20;
+  text-shadow: 5px 10px 30px #231f20;
 }
 
 #contact_form {
   background-color: aliceblue;
   box-shadow: 2px 4px 36px 8px #231f20;
   color: #231f20;
-  text-shadow: 5px 10px 20px #231f20;
+  /* text-shadow: 5px 10px 20px #231f20; */
   border-radius: 5px;
+}
+/* Remove arrows/spinner in number input field */
+input.no-spinner::-webkit-outer-spin-button,
+input.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.no-spinner {
+  -moz-appearance: textfield; /* Remove spinner in Firefox */
 }

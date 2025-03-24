@@ -98,7 +98,7 @@
 
     // List of area units
     const areaUnits = [
-        "Square Feet (sqft)", "Square Yards (sqyd)", "Square Meters (sqm)", 
+        "Sq. Ft.", "Sq. Yd.", "Sq Mtr.", 
         "Kanal", "Marla", "Acre", "Hectare"
     ];
 
