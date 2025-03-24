@@ -63,6 +63,7 @@
         >
           <h1 class="my-4 text-center" id="sect_heading">Get a Quote</h1>
           <hr />
+          <h3>Personal Information</h3>
           <div class="col-md-6">
             <label for="validationCustom01" class="form-label"
               >First name</label
@@ -149,6 +150,17 @@
             />
             <div class="invalid-feedback">Please provide a valid zip.</div>
           </div>
+          <hr>
+          <h3>Service Required</h3>
+          
+          <div class="col-md-3">
+            <label for="serviceSelect" class="form-label">Service</label>
+            <select class="form-select" id="serviceSelect" required>
+                <option selected disabled value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid service.</div>
+        </div>
+
           <div class="col-12">
             <div class="form-check">
               <input
@@ -223,5 +235,23 @@
     ></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/contact.js"></script>
+    <script>(() => {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+    
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()</script>
   </body>
 </html>

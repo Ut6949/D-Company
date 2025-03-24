@@ -41,3 +41,21 @@
     document.getElementById("validationCustomPhone").addEventListener("input", function () {
         this.setCustomValidity(this.checkValidity() ? "" : "Invalid mobile number format. Example: 03001234567");
     });
+
+
+    // List of services
+    const services = [
+        "Architecture", "Construction", "Turnkey Projects", 
+        "Interior Designing", "Renovation", "Business to Business"
+    ];
+
+    // Get the select element
+    const serviceSelect = document.getElementById("serviceSelect");
+
+    // Populate dropdown dynamically
+    services.forEach(service => {
+        let option = document.createElement("option");
+        option.value = service;
+        option.textContent = service;
+        serviceSelect.appendChild(option);
+    });
