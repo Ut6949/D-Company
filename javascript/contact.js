@@ -148,8 +148,8 @@
         const encodedMessage = encodeURIComponent(message);
     
         // Replace with your desired WhatsApp number (format: country code + number, no spaces)
-        const whatsappNumber = "923001234567"; // Example: Pakistan number (923001234567)
+        const whatsappNumber = "923330276949"; // Example: Pakistan number (923001234567)
     
         // Redirect to WhatsApp
-        window.open(`https://wa.me/${923330276949}?text=${encodedMessage}`, "_blank");
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
     });
