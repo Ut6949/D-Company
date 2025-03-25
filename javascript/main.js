@@ -187,7 +187,7 @@ document.getElementById("lower_navbar").innerHTML=`<nav class="navbar navbar-exp
                   >Industrial Projects</a
                 >
               </p>
-              <h6 class="text-uppercase fw-bold mb-4"><a href="" class="text-reset text-decoration-none"
+              <h6 class="text-uppercase fw-bold mb-4 "><a href="" class="text-reset text-decoration-none"
                   >Feedback</a
                 ></h6>
             </div>
