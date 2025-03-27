@@ -76,3 +76,27 @@ h1 {
     font-size: 2rem;
   }
 }
+
+.sect_heading {
+  color: #ffc107;
+  text-shadow: 5px 10px 10px #231f20;
+}
+
+.sect_text {
+  color: aliceblue;
+  text-align: justify;
+  margin: 0px;
+  font-size: x-large;
+  text-indent: 20px;
+}
+@media screen and (max-width: 768px) {
+  .sect_text {
+    font-size: small;
+  }
+}
+strong {
+  color: #ffc107;
+}
+.gallery-item {
+  box-shadow: 2px 4px 36px 12px #231f20;
+}
