@@ -7,6 +7,23 @@ h1 {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
+#banner {
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 2px 4px 36px 8px #231f20;
+}
+.sect_heading {
+  color: #ffc107;
+  text-shadow: 5px 10px 10px #231f20;
+}
+.sect_text {
+  color: aliceblue;
+  text-align: justify;
+  margin: 0px;
+  font-size: x-large;
+  text-indent: 20px;
+}
+/* Gallery Container Start Here */
+
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -33,6 +50,14 @@ h1 {
   transition: 0.2s ease-in;
 }
 
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
 .gallery-item.vertical {
   grid-row: span 2;
 }
@@ -41,43 +66,38 @@ h1 {
   grid-column: span 2;
 }
 
-.gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  filter: brightness(100%);
+/* Responsive - Convert to slider only on mobile and tablet */
+.swiper {
+  display: none;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .gallery-container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    display: none;
   }
-
-  .gallery-item.vertical {
-    grid-row: span 1;
+  .swiper {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
   }
-
-  .gallery-item.horizontal {
-    grid-column: span 1;
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
-@media (max-width: 480px) {
-  .gallery-container {
-    grid-template-columns: 1fr;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-}
-
-.sect_heading {
+Gallery Container Ends Here .sect_heading {
   color: #ffc107;
   text-shadow: 5px 10px 10px #231f20;
 }

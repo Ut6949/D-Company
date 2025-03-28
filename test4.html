@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Gallery Slider</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 200px;
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(95%);
+        transition: 0.2s ease-in;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+      .gallery-item.vertical {
+        grid-row: span 2;
+      }
+
+      .gallery-item.horizontal {
+        grid-column: span 2;
+      }
+
+      /* Responsive - Convert to slider only on mobile and tablet */
+      .swiper {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .gallery-container {
+          display: none;
+        }
+        .swiper {
+          display: block;
+          width: 100%;
+          height: auto;
+          padding-bottom: 20px;
+        }
+        .swiper-wrapper {
+          display: flex;
+          align-items: center;
+        }
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .swiper-slide img {
+          width: 90%;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Desktop Grid Gallery -->
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="Images/Gallery/3.jpg" alt="Image 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="Images/Gallery/4.jpg" alt="Image 4" />
+      </div>
+      <div class="gallery-item vertical">
+        <img src="Images/Gallery/201.jpg" alt="Image 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="Images/Gallery/7.jpg" alt="Image 4" />
+      </div>
+      <div class="gallery-item">
+        <img src="Images/Gallery/301.jpg" alt="Image 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="Images/Gallery/5.jpg" alt="Image 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="Images/Gallery/8.jpg" alt="Image 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="Images/Gallery/6.jpg" alt="Image 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="Images/Gallery/9.jpg" alt="Image 2" />
+      </div>
+    </div>
+
+    <!-- Mobile Swiper Slider -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="Images/Gallery/3.jpg" alt="Image 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Gallery/4.jpg" alt="Image 4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Gallery/201.jpg" alt="Image 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Gallery/7.jpg" alt="Image 4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Gallery/301.jpg" alt="Image 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Gallery/5.jpg" alt="Image 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Gallery/8.jpg" alt="Image 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Gallery/6.jpg" alt="Image 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="Images/Gallery/9.jpg" alt="Image 2" />
+        </div>
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        centeredSlides: true,
+        speed: 1000,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      // Pause autoplay on hover
+      document
+        .querySelector(".swiper")
+        .addEventListener("mouseenter", function () {
+          swiper.autoplay.stop();
+        });
+
+      document
+        .querySelector(".swiper")
+        .addEventListener("mouseleave", function () {
+          swiper.autoplay.start();
+        });
+    </script>
+  </body>
+</html>
