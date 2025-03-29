@@ -81,14 +81,19 @@ for (let service = 0; service <services.length; service++ ){
 }
 
 var swiper = new Swiper(".swiper-container", {
-  slidesPerView: "auto", // Automatically adjust based on container width
-  spaceBetween: 0, // No gaps between cards
-  loop: true, // Enable infinite scrolling
-  freeMode: true, // Allow continuous smooth movement
+  slidesPerView: "auto", 
+  spaceBetween: 0, 
+  loop: true, 
+  // freeMode: true, 
   autoplay: {
-    delay: 0, // No delay, continuous scrolling
-    disableOnInteraction: false,
+    delay: 0, 
+    disableOnInteraction: true, 
   },
-  speed: 7000, // Slow and smooth scrolling
-  allowTouchMove: false, // Disable manual sliding for smooth effect
+  speed: 7000, 
+  allowTouchMove: false, 
+});
+
+// Restart autoplay when interaction ends
+swiper.el.addEventListener("mouseleave", () => {
+  swiper.autoplay.start();
 });
