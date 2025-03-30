@@ -97,7 +97,9 @@ h1 {
   }
 }
 
-Gallery Container Ends Here .sect_heading {
+/* Gallery Container Ends Here */
+
+.sect_heading {
   color: #ffc107;
   text-shadow: 5px 10px 10px #231f20;
 }
