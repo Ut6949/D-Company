@@ -100,6 +100,46 @@
   text-align: justify;
 }
 
+/* Extra small devices (phones) */
+@media (max-width: 575px) {
+  /* Styles for phones */
+  .card-text {
+    font-size: 15px;
+  }
+}
+
+/* Small devices (tablets) */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Styles for small tablets */
+  .card-text {
+    font-size: 15px;
+  }
+}
+
+/* Medium devices (larger tablets & small laptops) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for large tablets */
+  .card-text {
+    font-size: 11px;
+  }
+}
+
+/* Large devices (desktops, laptops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Styles for laptops */
+  .card-text {
+    font-size: 15px;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+  /* Styles for large desktops */
+  .card-text {
+    font-size: 17px;
+  }
+}
+
 .swiper-container {
   width: 100%;
   overflow: hidden; /* Hide overflow */

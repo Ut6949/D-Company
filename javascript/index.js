@@ -71,7 +71,7 @@ for (let service = 0; service <services.length; service++ ){
                 <h5 class="card-title d-flex justify-content-center">
                 ${services[service].card_title}
                 </h5>
-                <p class="card-text">
+                <p class="card-text text-fluid text-wrap">
                 ${services[service].card_text}
                 </p>
               </div>
