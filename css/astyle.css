@@ -8,7 +8,7 @@
 }
 .sect_text {
   color: aliceblue;
-  text-align:justify;
+  text-align: start;
   margin: 0px;
   font-size: x-large;
   text-indent: 20px;
@@ -21,6 +21,6 @@
 strong {
   color: #ffc107;
 }
-#profile-card{
+#profile-card {
   box-shadow: 2px 4px 36px 8px #231f20;
 }

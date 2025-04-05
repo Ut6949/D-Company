@@ -19,7 +19,7 @@ h1 {
 
 .sect_text {
   color: aliceblue;
-  text-align: justify;
+  text-align: start;
   margin: 0px;
   font-size: x-large;
   text-indent: 20px;
