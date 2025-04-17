@@ -1,111 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Certificate of Provision of Services</title>
-  <style>
-    /* From Uiverse.io by ilkhoeri */ 
-.wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+  <head>
+    <title>D-Capture</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/hstyle.css" />
+    <link rel="icon" type="image/svg" href="Images/icon.svg" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-.inner {
-  --w: 100px;
-  --h: 150px;
-  --translateZ: calc((var(--w) + var(--h)) + 0px);
-  --rotateX: -15deg;
-  --perspective: 1000px;
-  position: absolute;
-  width: var(--w);
-  height: var(--h);
-  top: 25%;
-  left: calc(50% - (var(--w) / 2) - 2.5px);
-  z-index: 2;
-  transform-style: preserve-3d;
-  transform: perspective(var(--perspective));
-  animation: rotating 20s linear infinite; /* */
-}
-@keyframes rotating {
-  from {
-    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-      rotateY(0);
-  }
-  to {
-    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-      rotateY(1turn);
-  }
-}
+  <body id="body">
+    <!-- place navbar here -->
+    <div class="container-fluid" id="navbar"></div>
+    <header id="lower_navbar"></header>
+   <main>
+    
+   </main>
+    <footer>
+      <!-- place footer here -->
+      <div
+        class="container-fluid mt-5 p-0"
+        id="footer"
+        style="background-color: aliceblue"
+      ></div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
 
-.card {
-  position: absolute;
-  border: 2px solid rgba(var(--color-card));
-  border-radius: 12px;
-  overflow: hidden;
-  inset: 0;
-  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
-    translateZ(var(--translateZ));
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background: #0000
-    radial-gradient(
-      circle,
-      rgba(var(--color-card), 0.2) 0%,
-      rgba(var(--color-card), 0.6) 80%,
-      rgba(var(--color-card), 0.9) 100%
-    );
-}
-
-  </style>
-</head>
-<body>
-
-  <!-- From Uiverse.io by ilkhoeri --> 
-<div class="wrapper">
-  <div class="inner" style="--quantity: 10;">
-    <div class="card" style="--index: 0;--color-card: 142, 249, 252;">
-      <div class="img"></div>
-    </div>
-    <div class="card" style="--index: 1;--color-card: 142, 252, 204;">
-      <div class="img"></div>
-    </div>
-    <div class="card" style="--index: 2;--color-card: 142, 252, 157;">
-      <div class="img"></div>
-    </div>
-    <div class="card" style="--index: 3;--color-card: 215, 252, 142;">
-      <div class="img"></div>
-    </div>
-    <div class="card" style="--index: 4;--color-card: 252, 252, 142;">
-      <div class="img"></div>
-    </div>
-    <div class="card" style="--index: 5;--color-card: 252, 208, 142;">
-      <div class="img"></div>
-    </div>
-    <div class="card" style="--index: 6;--color-card: 252, 142, 142;">
-      <div class="img"></div>
-    </div>
-    <div class="card" style="--index: 7;--color-card: 252, 142, 239;">
-      <div class="img"></div>
-    </div>
-    <div class="card" style="--index: 8;--color-card: 204, 142, 252;">
-      <div class="img"></div>
-    </div>
-    <div class="card" style="--index: 9;--color-card: 142, 202, 252;">
-      <div class="img"></div>
-    </div>
-  </div>
-</div>
-
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/index.js"></script>
+  </body>
 </html>
