@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Commercial Projects</title>
+    <title>D-Capture</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/pstyle.css" />
+    <link rel="stylesheet" href="css/hstyle.css" />
     <link rel="icon" type="image/svg" href="Images/icon.svg" />
+    <!-- Bootstrap CSS v5.2.1 -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <!-- Bootstrap CSS v5.2.1 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,219 +31,124 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      .gallery-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-auto-rows: 200px;
-        gap: 20px;
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-      }
+      /* From Uiverse.io by ilkhoeri */ 
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-      .gallery-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-      }
+.inner {
+  --w: 100px;
+  --h: 150px;
+  --translateZ: calc((var(--w) + var(--h)) + 0px);
+  --rotateX: -15deg;
+  --perspective: 1000px;
+  position: absolute;
+  width: var(--w);
+  height: var(--h);
+  top: 25%;
+  left: calc(50% - (var(--w) / 2) - 2.5px);
+  z-index: 2;
+  transform-style: preserve-3d;
+  transform: perspective(var(--perspective));
+  animation: rotating 20s linear infinite; /* */
+}
+@keyframes rotating {
+  from {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(0);
+  }
+  to {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(1turn);
+  }
+}
 
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: brightness(95%);
-        transition: 0.2s ease-in;
-      }
+.card {
+  position: absolute;
+  border: 2px solid rgba(var(--color-card));
+  border-radius: 12px;
+  overflow: hidden;
+  inset: 0;
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(var(--translateZ));
+}
 
-      .gallery-item:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      }
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #0000
+    radial-gradient(
+      circle,
+      rgba(var(--color-card), 0.2) 0%,
+      rgba(var(--color-card), 0.6) 80%,
+      rgba(var(--color-card), 0.9) 100%
+    );
+}
 
-      .gallery-item:hover img {
-        transform: scale(1.1);
-      }
-      .gallery-item.vertical {
-        grid-row: span 2;
-      }
-
-      .gallery-item.horizontal {
-        grid-column: span 2;
-      }
-
-      /* Responsive - Convert to slider only on mobile and tablet */
-      .swiper {
-        display: none;
-      }
-
-      @media (max-width: 768px) {
-        .gallery-container {
-          display: none;
-        }
-        .swiper {
-          display: block;
-          width: 100%;
-          height: auto;
-          padding-bottom: 20px;
-        }
-        .swiper-wrapper {
-          display: flex;
-          align-items: center;
-        }
-        .swiper-slide {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .swiper-slide img {
-          width: 90%;
-          border-radius: 15px;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-      }
     </style>
   </head>
+
   <body id="body">
-    <!-- Gallery Container -->
+    <!-- place navbar here -->
     <div class="container-fluid" id="navbar"></div>
     <header id="lower_navbar"></header>
-    <div class="container">
-      <div class="row d-flex justify-content-center align-middle" id="banner">
-        <div class="col-md-12 px-0">
-          <div
-            id="carouselExampleSlidesOnly"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img
-                  src="Images/CP.svg"
-                  class="d-block w-100"
-                  alt="..."
-                  style="border-radius: 0 0 10px 10px"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+   <main>
+    <!-- From Uiverse.io by ilkhoeri --> 
+<!-- From Uiverse.io by ilkhoeri --> 
+<div class="wrapper">
+  <div class="inner" style="--quantity: 10;">
+    <div class="card" style="--index: 0;--color-card: 142, 249, 252;">
+      <div class="img"></div>
     </div>
+    <div class="card" style="--index: 1;--color-card: 142, 252, 204;">
+      <div class="img"></div>
+    </div>
+    <div class="card" style="--index: 2;--color-card: 142, 252, 157;">
+      <div class="img"></div>
+    </div>
+    <div class="card" style="--index: 3;--color-card: 215, 252, 142;">
+      <div class="img"></div>
+    </div>
+    <div class="card" style="--index: 4;--color-card: 252, 252, 142;">
+      <div class="img"></div>
+    </div>
+    <div class="card" style="--index: 5;--color-card: 252, 208, 142;">
+      <div class="img"></div>
+    </div>
+    <div class="card" style="--index: 6;--color-card: 252, 142, 142;">
+      <div class="img"></div>
+    </div>
+    <div class="card" style="--index: 7;--color-card: 252, 142, 239;">
+      <div class="img"></div>
+    </div>
+    <div class="card" style="--index: 8;--color-card: 204, 142, 252;">
+      <div class="img"></div>
+    </div>
+    <div class="card" style="--index: 9;--color-card: 142, 202, 252;">
+      <div class="img"></div>
+    </div>
+  </div>
+</div>
 
-    <main>
-      <div class="container my-3">
-        <div
-          class="row my-5"
-          style="
-            background-color: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          "
-        >
-          <div
-            class="col-lg-4 col-md-12 col-sm-12 col-12 p-0 d-flex justify-content-center bg-transparent"
-          >
-            <img
-              src="Images/Gallery/3.jpg"
-              class="img-fluid bg-transparent"
-              alt=""
-              style="
-                height: auto;
-                width: 400px;
-                box-shadow: 2px 4px 36px 8px #231f20;
-                border-radius: px;
-              "
-            />
-          </div>
-          <div class="col-lg-8 col-md-12 col-sm-12 col-12 p-4">
-            <h1 class="sect_heading">VALENCIA CERAMIC</h1>
-            <hr />
-            <p class="sect_text text-fluid">
-              <strong>VALENCIA CERAMIC</strong> is a premium ceramic showroom
-              renowned for its exquisite collection of high-quality tiles and
-              ceramics. We had the privilege of designing their showroom,
-              crafting a sophisticated and modern space that beautifully
-              showcases their products. Our comprehensive services—including
-              <strong
-                >Architectural Planning, Interior Designing, and Turnkey
-                Project</strong
-              >
-              —ensured a seamless fusion of aesthetics and functionality. By
-              integrating innovative design elements and strategic lighting, we
-              transformed their showroom into a luxurious, inviting space that
-              perfectly embodies the elegance of their brand.
-            </p>
-          </div>
-        </div>
-        <!-- Desktop Grid Gallery -->
-        <div class="gallery-container">
-          <div class="gallery-item">
-            <img src="Images/Gallery/3.jpg" alt="Image 1" />
-          </div>
-          <div class="gallery-item">
-            <img src="Images/Gallery/4.jpg" alt="Image 4" />
-          </div>
-          <div class="gallery-item vertical">
-            <img src="Images/Gallery/201.jpg" alt="Image 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="Images/Gallery/7.jpg" alt="Image 4" />
-          </div>
-          <div class="gallery-item">
-            <img src="Images/Gallery/301.jpg" alt="Image 1" />
-          </div>
-          <div class="gallery-item">
-            <img src="Images/Gallery/5.jpg" alt="Image 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="Images/Gallery/8.jpg" alt="Image 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="Images/Gallery/6.jpg" alt="Image 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="Images/Gallery/9.jpg" alt="Image 2" />
-          </div>
-        </div>
 
-        <!-- Mobile Swiper Slider -->
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="Images/Gallery/3.jpg" alt="Image 1" />
-            </div>
-            <div class="swiper-slide">
-              <img src="Images/Gallery/4.jpg" alt="Image 4" />
-            </div>
-            <div class="swiper-slide">
-              <img src="Images/Gallery/201.jpg" alt="Image 2" />
-            </div>
-            <div class="swiper-slide">
-              <img src="Images/Gallery/7.jpg" alt="Image 4" />
-            </div>
-            <div class="swiper-slide">
-              <img src="Images/Gallery/301.jpg" alt="Image 1" />
-            </div>
-            <div class="swiper-slide">
-              <img src="Images/Gallery/5.jpg" alt="Image 2" />
-            </div>
-            <div class="swiper-slide">
-              <img src="Images/Gallery/8.jpg" alt="Image 2" />
-            </div>
-            <div class="swiper-slide">
-              <img src="Images/Gallery/6.jpg" alt="Image 2" />
-            </div>
-            <div class="swiper-slide">
-              <img src="Images/Gallery/9.jpg" alt="Image 2" />
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </main>
+   </main>
+    <footer>
+      <!-- place footer here -->
+      <div
+        class="container-fluid mt-5 p-0"
+        id="footer"
+        style="background-color: aliceblue"
+      ></div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -250,38 +160,7 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="javascript/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".swiper", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        loop: true,
-        centeredSlides: true,
-        speed: 1000,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-
-      // Pause autoplay on hover
-      document
-        .querySelector(".swiper")
-        .addEventListener("mouseenter", function () {
-          swiper.autoplay.stop();
-        });
-
-      document
-        .querySelector(".swiper")
-        .addEventListener("mouseleave", function () {
-          swiper.autoplay.start();
-        });
-    </script>
+    <script src="javascript/index.js"></script>
   </body>
 </html>
