@@ -24,3 +24,8 @@ strong {
 #profile-card {
   box-shadow: 2px 4px 36px 8px #231f20;
 }
+.styled-hr {
+  border: none;
+  height: 3px;
+  background-color: #ffc107;
+}
