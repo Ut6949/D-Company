@@ -25,6 +25,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
 
   <body id="body">
@@ -192,15 +200,30 @@
           </div>
         </div>
         <hr />
-        <div class="row mt-3 g-4">
-          <div class="col-12 d-flex justify-content-center mt-0">
-            <h1 class="text-fluid sect_heading" id="services">
-              OUR MANAGEMENT
-            </h1>
+
+        
+        <div class="container my-5">
+          <div class="row mt-3 g-4">
+            <div class="col-12 d-flex justify-content-center mt-0">
+              <h1 class="text-fluid sect_heading" id="services">OUR MANAGEMENT</h1>
+            </div>
+          </div>
+    
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="profile_card">
+              <!-- Cards will be injected here -->
+            </div>
+    
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
-
-        <div class="row g-4 mt-1" id="profile_card"></div>
+        
+        </div>
       </div>
     </main>
     <footer>

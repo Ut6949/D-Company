@@ -29,3 +29,25 @@ strong {
   height: 3px;
   background-color: #ffc107;
 }
+
+.swiper-slide {
+  display: flex;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: aquamarine;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-text {
+  flex-grow: 1;
+}
