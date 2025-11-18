@@ -8,20 +8,20 @@
   intro:'Is a seasoned <strong>3D Visualizer</strong> with vast experience in architectural visualization and construction design.'},
   {
   id:2,
-  img: '',
+  img: 'Images/Haris Profile.svg',
   name:'Mr. M. Haris Mughal',
   des:'ARCHITECT / INTERIOR DESIGNER',
   intro:'An accomplished <strong>Architect and Interior Designer</strong>, brings creativity and expertise to innovative architectural and interior design solutions.'},
   {
   id:3,
-  img: '',
+  img: 'Images/Farhan Profile.svg',
   name:'Mr. Naveed Saqib',
   des:'CIVIL ENGINEER',
   intro:'A skilled <strong>Civil Engineer</strong>, brings expertise in structural design and construction, ensuring durable and efficient engineering solutions.'
   },
   {
   id:4,
-  img: '',
+  img: 'Images/Farhan Profile.svg',
   name:'Mr. Hamza Jameel',
   des:'SITE SUPERVISOR / DRAFTSMAN',
   intro:'A proficient <strong>Site Surveyor and Draftsman</strong>, specializes in precise site assessments and detailed technical drawings for accurate project execution.'
@@ -40,7 +40,7 @@ for (let cards = 0; cards < card.length; cards++) {
           <div class="card">
             <img
               src="${card[cards].img}"
-              alt="N/A"
+              alt="Slide 1"
               class="card-img-top img-fluid"
             />
             <div class="card-body">

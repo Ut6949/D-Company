@@ -21,33 +21,61 @@
 strong {
   color: #ffc107;
 }
-#profile-card {
-  box-shadow: 2px 4px 36px 8px #231f20;
+
+.custom-btn {
+  background-color: #000 !important;
+  color: #ffc107 !important;
+  border: 1px solid #ffc107 !important;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.styled-hr {
+
+.custom-btn:hover {
+  background-color: #ffc107 !important;
+  border-color: #111 !important;
+  color: #000 !important;
+}
+
+.slider-wrapper {
+  padding: 0rem 0;
+}
+
+/* A bit of spacing for slide content */
+.slide-card {
+  padding: 0.5rem;
+}
+
+/* make slick arrows sit outside on large screens */
+@media (min-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* optional: consistent image height (keeps layout stable) */
+.slide-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 220px; /* change if you want taller/shorter slides */
+  display: block;
+}
+.slide-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 380px; /* fixed height — keeps all cards uniform */
+  display: block;
+}
+.slide-card h3 {
+  color: #ffc107;
+}
+.slide-card hr {
   border: none;
   height: 3px;
   background-color: #ffc107;
 }
 
-.swiper-slide {
-  display: flex;
-  height: auto;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-color: aquamarine;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.card-text {
-  flex-grow: 1;
-}
