@@ -140,16 +140,107 @@
   }
 }
 
-.swiper-container {
+/* css/swiper-patch.css
+   Swiper-friendly CSS: responsive slides, touch-action, overlay fix, nav/pagination on top.
+*/
+
+.swiper, .swiper-container {
   width: 100%;
-  overflow: hidden; /* Hide overflow */
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;       /* let Swiper handle horizontal gestures */
+  -ms-touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .swiper-wrapper {
-  transition-timing-function: linear !important; /* Smooth scrolling */
+  display: flex;
+  transition-timing-function: linear !important;
+  will-change: transform;
 }
 
 .swiper-slide {
-  width: auto !important; /* Let slides adjust dynamically */
-  flex-shrink: 0; /* Prevent shrinking */
+  flex: 0 0 auto;            /* variable width but won't shrink */
+  width: auto !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+  user-select: none;
+  padding: 0 10px;           /* small gap to keep cards separated on small screens */
 }
+
+/* If overlay is purely decorative, ignore pointer events so touches reach the slider */
+#frosted-overlay, .overlay {
+  pointer-events: none;
+}
+
+/* Ensure nav & pagination are above overlays and clickable */
+.swiper-button-next, .swiper-button-prev, .swiper-pagination {
+  z-index: 50;
+  pointer-events: auto;
+}
+
+/* Make cards inside slides center and responsive */
+.swiper-slide .card {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 320px;          /* card max width */
+}
+
+/* Small-screen adjustments */
+@media (max-width: 576px) {
+  .swiper-slide {
+    padding: 0 8px;
+  }
+  .swiper-slide .card {
+    max-width: 260px;
+  }
+}
+
+
+/* Our Clients Slider */
+.continuous-marquee {
+        overflow: hidden;
+        width: 100%;
+      }
+      .marquee-track {
+        display: flex;
+        gap: 16px;
+        width: max-content;
+        animation: marquee 10s linear infinite;
+        align-items: center;
+      }
+      .m-slide {
+        flex: 0 0 auto;
+      }
+
+/* Apply transparent background + no border to ALL slide cards */
+.m-slide .card {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important; /* optional: removes Bootstrap default shadow */
+}
+
+/* Apply width: 100px to ALL images inside slides */
+.m-slide .card img {
+  width: 100px !important;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto; /* center images */
+}
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        } /* -50% to scroll exactly one copy */
+      }
+.card{
+  
+}
+      /* Duplicate slides so the track is at least twice the visible length.
+   You can clone slides with small JS on load instead of putting duplicates in HTML. */
+

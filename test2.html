@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-    <div class="container-fluid p-0 d-flex justify-content-center mt-3 mb-5" style="background-color: white">
-        <div class="container d-flex justify-content-center m-0 p-0">
-          <div class="swiper-container m-0 p-0">
-            <div class="swiper-wrapper d-flex justify-content-around p-0 m-0">
-              <div class="swiper-slide mx-5">
-                <div class="card border border-start-0 border-end-0 rounded-0" id="mission-card">
-                  <img src="Images/P1.svg" class="card-img-top img-fluid mx-auto" style="height: 200px; width: 200px" />
-                  <div class="card-body px-0" style="padding-top: 0">
-                    <h5 class="card-title" style="display: flex; justify-content: center; margin-top: 0;">Project Completion</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide mx-5">
-                <div class="card border border-start-0 border-end-0 rounded-0" id="mission-card">
-                  <img src="Images/P2.svg" class="card-img-top img-fluid mx-auto" style="height: 200px; width: 200px" />
-                  <div class="card-body px-0" style="padding-top: 0">
-                    <h5 class="card-title text-center" style="display: flex; justify-content: center; margin-top: 0;">Client's Satisfaction</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide mx-5">
-                <div class="card border border-start-0 border-end-0 rounded-0" id="mission-card">
-                  <img src="Images/P2.svg" class="card-img-top img-fluid mx-auto" style="height: 200px; width: 200px" />
-                  <div class="card-body px-0" style="padding-top: 0">
-                    <h5 class="card-title text-center" style="display: flex; justify-content: center; margin-top: 0;">Client's Satisfaction</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-    <Customer
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+    <style>
+      .continuous-marquee {
+        overflow: hidden;
+        width: 100%;
+      }
+      .marquee-track {
+        display: flex;
+        gap: 16px;
+        width: max-content;
+        animation: marquee 40s linear infinite;
+        align-items: center;
+      }
+      .m-slide {
+        flex: 0 0 auto;
+      }
 
-  <body id="body">
-    <!-- place navbar here -->
-    
-    </body>
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        } /* -50% to scroll exactly one copy */
+      }
+
+      /* Duplicate slides so the track is at least twice the visible length.
+   You can clone slides with small JS on load instead of putting duplicates in HTML. */
+    </style>
+  </head>
+  <body>
+    <!-- marquee container -->
+    <div class="continuous-marquee">
+      <div class="marquee-track">
+        <!-- original slides -->
+        <div class="m-slide">
+          <div class="card"><img src="Images/P1.svg" alt="" /></div>
+        </div>
+        <div class="m-slide">
+          <div class="card"><img src="Images/P2.svg" alt="" /></div>
+        </div>
+        <div class="m-slide">
+          <div class="card"><img src="Images/P3.svg" alt="" /></div>
+        </div>
+        <!-- duplicate slides (can be copied via JS to avoid repetition in HTML) -->
+        <div class="m-slide">
+          <div class="card"><img src="Images/P1.svg" alt="" /></div>
+        </div>
+        <div class="m-slide">
+          <div class="card"><img src="Images/P2.svg" alt="" /></div>
+        </div>
+        <div class="m-slide">
+          <div class="card"><img src="Images/P3.svg" alt="" /></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const track = document.querySelector(".marquee-track");
+      if (track) {
+        const children = Array.from(track.children);
+        children.forEach((child) => track.appendChild(child.cloneNode(true)));
+      }
+    </script>
+  </body>
 </html>

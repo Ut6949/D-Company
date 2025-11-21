@@ -97,3 +97,94 @@ for (let service = 0; service <services.length; service++ ){
 // swiper.el.addEventListener("mouseleave", () => {
 //   swiper.autoplay.start();
 // });
+/* javascript/swiper-init.js
+   Initialize Swiper with autoplay and responsive breakpoints.
+   Make sure swiper-bundle.min.js is loaded before this file.
+*/
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof Swiper === 'undefined') {
+    console.warn('Swiper lib not found. Include swiper-bundle.min.js before swiper-init.js');
+    return;
+  }
+
+  // Single selector; change '.swiper' to '.swiper-container' if your markup uses that
+  const swiperEl = document.querySelector('.swiper');
+  if (!swiperEl) {
+    console.warn('No .swiper element found in DOM.');
+    return;
+  }
+
+  // Clean any previous instance if you accidentally initialize twice (dev-time helper)
+  if (swiperEl.swiper) {
+    try { swiperEl.swiper.destroy(true, true); } catch (e) {}
+  }
+
+  const mySwiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 'auto',          // auto width slides (works with flex: 0 0 auto)
+    spaceBetween: 16,
+    centeredSlides: false,
+    grabCursor: true,
+    simulateTouch: true,
+    allowTouchMove: true,
+    // Autoplay: images will slide automatically without clicking
+    autoplay: {
+      delay: 2500,                  // ms between slides
+      disableOnInteraction: false,  // keep autoplay after user interactions
+      pauseOnMouseEnter: true       // pause when mouse hovers (good for desktop)
+    },
+    // Fine-tune touch behavior
+    touchStartPreventDefault: false,
+    touchReleaseOnEdges: true,
+    // Pagination + navigation (enable if present in markup)
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    // Responsive breakpoints (override slidesPerView for bigger screens)
+    breakpoints: {
+      0:    { slidesPerView: 1.05, spaceBetween: 12 },
+      576:  { slidesPerView: 1.2,  spaceBetween: 14 },
+      768:  { slidesPerView: 2,    spaceBetween: 18 },
+      992:  { slidesPerView: 3,    spaceBetween: 24 }
+    },
+    // Accessibility (optional)
+    a11y: {
+      enabled: true,
+      prevSlideMessage: 'Previous slide',
+      nextSlideMessage: 'Next slide',
+      firstSlideMessage: 'This is the first slide',
+      lastSlideMessage: 'This is the last slide'
+    }
+  });
+
+  // Optional: expose instance for debugging in console: window.mySwiper = mySwiper;
+  window.mySwiper = mySwiper;
+});
+
+
+// Our Client Slider
+const track = document.querySelector(".marquee-track");
+      if (track) {
+        const children = Array.from(track.children);
+        children.forEach((child) => track.appendChild(child.cloneNode(true)));
+      }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".marquee-track");
+  const slides = Array.from(track.children);
+
+  // Duplicate all slides twice (you can change 2 to any number)
+  for (let i = 0; i < 2; i++) {
+    slides.forEach(slide => {
+      track.appendChild(slide.cloneNode(true));
+    });
+  }
+});
+
