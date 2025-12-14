@@ -8,8 +8,8 @@
   intro:'Is a seasoned <strong>3D Visualizer</strong> with vast experience in architectural visualization and construction design.'},
   {
   id:2,
-  img: '',
-  name:'Mr. M. Haris Mughal',
+  img: 'Images/Javaid Iqbal.png',
+  name:'Mr. Javaid Iqbal',
   des:'ARCHITECT / INTERIOR DESIGNER',
   intro:'An accomplished <strong>Architect and Interior Designer</strong>, brings creativity and expertise to innovative architectural and interior design solutions.'},
   {

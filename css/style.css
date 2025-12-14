@@ -20,7 +20,7 @@
 #lower_navbar {
   position: sticky;
   top: 0px;
-  z-index: 2;
+  z-index: 10000;
 }
 #button_navbar {
   background-color: black;
@@ -28,7 +28,8 @@
   border-top: 2px solid #ffc107;
   position: sticky;
   top: 0px;
-  z-index: 2;
+  z-index: 10000;
+  isolation: isolate;
 }
 
 #search_bar {

@@ -1,35 +1,69 @@
 #side_banner {
-  background-color: none;
-  border-radius: 0px 0px 10px 10px;
+  position: relative;
   display: flex;
   justify-content: center;
-  justify-items: center;
-  position: relative;
+  overflow: hidden;
 }
+
 #sidebar {
   background-color: aliceblue;
   margin: 10px;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0 0 10px 10px;
   box-shadow: 2px 4px 36px 8px #ffc107;
+  z-index: 1;
 }
-#frosted-overlay {
+
+.frost {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: transform 1.2s ease, backdrop-filter 1.2s ease, border 0.6s ease;
+  z-index: 2;
+}
+
+.frost-left {
+  left: 0;
+  border-radius: 0 0 0 10px;
+}
+
+.frost-right {
+  right: 0;
+  border-radius: 0 0 10px 0;
+}
+
+#side_banner:hover .frost-left {
+  transform: translateX(-100%);
+  backdrop-filter: blur(0);
+  border: 1px solid rgba(255, 193, 7, 0.8);
+}
+
+#side_banner:hover .frost-right {
+  transform: translateX(100%);
+  backdrop-filter: blur(0);
+  border: 1px solid rgba(255, 193, 7, 0.8);
+}
+
+.frost::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.092); /* Semi-transparent */
-  backdrop-filter: blur(10px); /* The blur effect */
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  border-radius: 0px 0px 10px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 2s ease;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  opacity: 0;
 }
-#frosted-overlay:hover {
-  backdrop-filter: blur(0px); /* The blur effect */
-  -webkit-backdrop-filter: blur(0px); /* For Safari support */
-}
+
 #text-overlay {
   position: absolute;
   display: flex;
@@ -144,11 +178,12 @@
    Swiper-friendly CSS: responsive slides, touch-action, overlay fix, nav/pagination on top.
 */
 
-.swiper, .swiper-container {
+.swiper,
+.swiper-container {
   width: 100%;
   position: relative;
   overflow: hidden;
-  touch-action: pan-y;       /* let Swiper handle horizontal gestures */
+  touch-action: pan-y; /* let Swiper handle horizontal gestures */
   -ms-touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
 }
@@ -160,22 +195,25 @@
 }
 
 .swiper-slide {
-  flex: 0 0 auto;            /* variable width but won't shrink */
+  flex: 0 0 auto; /* variable width but won't shrink */
   width: auto !important;
   max-width: 100%;
   box-sizing: border-box;
   -webkit-user-drag: none;
   user-select: none;
-  padding: 0 10px;           /* small gap to keep cards separated on small screens */
+  padding: 0 10px; /* small gap to keep cards separated on small screens */
 }
 
 /* If overlay is purely decorative, ignore pointer events so touches reach the slider */
-#frosted-overlay, .overlay {
+#frosted-overlay,
+.overlay {
   pointer-events: none;
 }
 
 /* Ensure nav & pagination are above overlays and clickable */
-.swiper-button-next, .swiper-button-prev, .swiper-pagination {
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
   z-index: 50;
   pointer-events: auto;
 }
@@ -184,7 +222,7 @@
 .swiper-slide .card {
   margin: 0 auto;
   width: 100%;
-  max-width: 320px;          /* card max width */
+  max-width: 320px; /* card max width */
 }
 
 /* Small-screen adjustments */
@@ -197,22 +235,21 @@
   }
 }
 
-
 /* Our Clients Slider */
 .continuous-marquee {
-        overflow: hidden;
-        width: 100%;
-      }
-      .marquee-track {
-        display: flex;
-        gap: 16px;
-        width: max-content;
-        animation: marquee 10s linear infinite;
-        align-items: center;
-      }
-      .m-slide {
-        flex: 0 0 auto;
-      }
+  overflow: hidden;
+  width: 100%;
+}
+.marquee-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: marquee 10s linear infinite;
+  align-items: center;
+}
+.m-slide {
+  flex: 0 0 auto;
+}
 
 /* Apply transparent background + no border to ALL slide cards */
 .m-slide .card {
@@ -230,17 +267,15 @@
   margin: 0 auto; /* center images */
 }
 
-      @keyframes marquee {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-50%);
-        } /* -50% to scroll exactly one copy */
-      }
-.card{
-  
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  } /* -50% to scroll exactly one copy */
 }
-      /* Duplicate slides so the track is at least twice the visible length.
+.card {
+}
+/* Duplicate slides so the track is at least twice the visible length.
    You can clone slides with small JS on load instead of putting duplicates in HTML. */
-
