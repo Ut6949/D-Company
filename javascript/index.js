@@ -80,27 +80,7 @@ for (let service = 0; service <services.length; service++ ){
   `
 }
 
-// var swiper = new Swiper(".swiper-container", {
-//   slidesPerView: "auto", 
-//   spaceBetween: 0, 
-//   loop: true, 
-//   // freeMode: true, 
-//   autoplay: {
-//     delay: 0, 
-//     disableOnInteraction: true, 
-//   },
-//   speed: 7000, 
-//   allowTouchMove: false, 
-// });
 
-// // Restart autoplay when interaction ends
-// swiper.el.addEventListener("mouseleave", () => {
-//   swiper.autoplay.start();
-// });
-/* javascript/swiper-init.js
-   Initialize Swiper with autoplay and responsive breakpoints.
-   Make sure swiper-bundle.min.js is loaded before this file.
-*/
 
 document.addEventListener('DOMContentLoaded', function () {
   if (typeof Swiper === 'undefined') {
