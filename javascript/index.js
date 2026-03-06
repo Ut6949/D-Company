@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     allowTouchMove: true,
     // Autoplay: images will slide automatically without clicking
     autoplay: {
-      delay: 2500,                  // ms between slides
+      delay: 4500,                  // ms between slides
       disableOnInteraction: false,  // keep autoplay after user interactions
       pauseOnMouseEnter: true       // pause when mouse hovers (good for desktop)
     },
